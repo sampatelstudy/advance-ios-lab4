@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Dock51.ttf">
+            <string>Dock51</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="lab_ice_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lives:99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6k-fk-5ws">
+                                <rect key="frame" x="20" y="59.000000000000007" width="89" height="25.333333333333336"/>
+                                <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="24"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:9999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3EE-88-Jtx">
+                                <rect key="frame" x="231" y="59.000000000000007" width="174" height="25.333333333333336"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="174" id="nPD-nb-So4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="24"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Mail Pilot" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IL-dg-Vvv">
+                                <rect key="frame" x="20" y="182.33333333333337" width="390" height="231.66666666666663"/>
+                                <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="80"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6CE-nn-hfs">
+                                <rect key="frame" x="141" y="508" width="149.33333333333337" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="g7S-W7-Pfh"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Start">
+                                    <fontDescription key="titleFontDescription" name="Dock51" family="Dock 51" pointSize="48"/>
+                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="StartButton_Pressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="3Fi-PE-DD8"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Game Over" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrI-Z6-var" userLabel="End Label">
+                                <rect key="frame" x="15" y="206" width="390" height="231.66666666666663"/>
+                                <fontDescription key="fontDescription" name="Dock51" family="Dock 51" pointSize="70"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTJ-Pr-oNb" userLabel="Restart Button">
+                                <rect key="frame" x="109" y="507" width="202" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="46v-Rx-LSv"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Restart">
+                                    <fontDescription key="titleFontDescription" name="Dock51" family="Dock 51" pointSize="48"/>
+                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="RestartButton_Pressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="YzW-1B-Yeg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="F6k-fk-5ws" firstAttribute="baseline" secondItem="3EE-88-Jtx" secondAttribute="baseline" id="0DE-6w-p5Y"/>
+                            <constraint firstItem="6CE-nn-hfs" firstAttribute="top" secondItem="3IL-dg-Vvv" secondAttribute="bottom" constant="94" id="Cs6-ZL-VdF"/>
+                            <constraint firstItem="nTJ-Pr-oNb" firstAttribute="centerX" secondItem="vrI-Z6-var" secondAttribute="centerX" id="FEQ-YF-yl9"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="nTJ-Pr-oNb" secondAttribute="bottom" constant="326" id="GC9-re-uon"/>
+                            <constraint firstItem="F6k-fk-5ws" firstAttribute="leading" secondItem="3IL-dg-Vvv" secondAttribute="leading" id="Tba-vQ-7c0"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="6CE-nn-hfs" secondAttribute="bottom" constant="325" id="UD7-7R-9rM"/>
+                            <constraint firstItem="nTJ-Pr-oNb" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="109" id="VoJ-G0-kVK"/>
+                            <constraint firstItem="3IL-dg-Vvv" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" id="cBG-jx-1px"/>
+                            <constraint firstItem="F6k-fk-5ws" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" id="gWc-Uv-uON"/>
+                            <constraint firstItem="F6k-fk-5ws" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" id="gyp-hj-YUJ"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="3EE-88-Jtx" secondAttribute="trailing" constant="25" id="iNC-k1-9rt"/>
+                            <constraint firstItem="F6k-fk-5ws" firstAttribute="firstBaseline" secondItem="3EE-88-Jtx" secondAttribute="firstBaseline" id="iq6-hC-ioC"/>
+                            <constraint firstItem="3IL-dg-Vvv" firstAttribute="top" secondItem="F6k-fk-5ws" secondAttribute="bottom" constant="98" id="p8C-Td-hB2"/>
+                            <constraint firstItem="nTJ-Pr-oNb" firstAttribute="top" secondItem="vrI-Z6-var" secondAttribute="bottom" constant="69.333333333333371" id="rI7-GE-adi"/>
+                            <constraint firstItem="6CE-nn-hfs" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="141" id="zdn-ZC-Jkd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="EndLabel" destination="vrI-Z6-var" id="DTl-sN-QqB"/>
+                        <outlet property="LivesLabel" destination="F6k-fk-5ws" id="J60-wl-Q21"/>
+                        <outlet property="RestartButton" destination="nTJ-Pr-oNb" id="31d-Z0-Cb7"/>
+                        <outlet property="ScoreLabel" destination="3EE-88-Jtx" id="gdF-uf-2sc"/>
+                        <outlet property="StartButton" destination="6CE-nn-hfs" id="AtD-ED-aNh"/>
+                        <outlet property="StartLabel" destination="3IL-dg-Vvv" id="2lC-Yh-O1b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.74418604651163" y="3.8626609442060089"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
